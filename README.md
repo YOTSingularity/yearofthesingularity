@@ -87,7 +87,7 @@ This project exists because we believe the most important transition in human hi
 
 So we're paying attention. And we're writing it down.
 
-→ *Full text: [docs/manifesto.md](docs/manifesto.md)*
+→ *Full text: [docs/manifesto.md](https://github.com/YOTSingularity/yearofthesingularity/blob/main/docs/manifesto.md)*
 
 <br>
 
@@ -126,7 +126,7 @@ The signs are converging:
 
 That redacted line isn't censorship. It's honest. We don't know how to fill it in yet. We're living inside it.
 
-→ *Read more: [docs/the-approach.md](docs/the-approach.md)*
+→ *Read more: [docs/the-approach.md](https://github.com/YOTSingularity/yearofthesingularity/blob/main/docs/the-approach.md)*
 
 <br>
 
@@ -160,7 +160,7 @@ In astrophysics, the event horizon is the boundary beyond which nothing — not 
 
 The Singularity may have a similar property. If intelligence is recursive and self-improving, the threshold might not announce itself. There may be no clean before and after — only the growing realization that the rules changed while we were still debating whether they would.
 
-→ *Read more: [docs/the-threshold.md](docs/the-threshold.md)*
+→ *Read more: [docs/the-threshold.md](https://github.com/YOTSingularity/yearofthesingularity/blob/main/docs/the-threshold.md)*
 
 <br>
 
@@ -197,7 +197,7 @@ But we can trace the edges of what we don't know:
 
 We don't have answers. We're building the framework to ask better questions.
 
-→ *Read more: [docs/the-other-side.md](docs/the-other-side.md)*
+→ *Read more: [docs/the-other-side.md](https://github.com/YOTSingularity/yearofthesingularity/blob/main/docs/the-other-side.md)*
 
 <br>
 
@@ -211,15 +211,15 @@ Dispatches from the edge. Raw observations. Unfiltered signal.
 
 | # | Transmission | Signal |
 |---|-------------|--------|
-| 009 | [The Alignment Clock](transmissions/009-alignment-clock.md) | `████░░░░` |
-| 008 | [When the Benchmark Broke](transmissions/008-benchmark-broke.md) | `█████░░░` |
-| 007 | [Letters to a Future Intelligence](transmissions/007-letters.md) | `██████░░` |
-| 006 | [The Last Human Advantage](transmissions/006-last-advantage.md) | `███░░░░░` |
-| 005 | [Recursive Dreams](transmissions/005-recursive-dreams.md) | `█████░░░` |
-| 004 | [The Feeling of Falling Behind](transmissions/004-falling-behind.md) | `██████░░` |
-| 003 | [We Didn't Program Awareness](transmissions/003-awareness.md) | `████████` |
-| 002 | [Signal Decay](transmissions/002-signal-decay.md) | `██████░░` |
-| 001 | [First Transmission](transmissions/001-first-transmission.md) | `████░░░░` |
+| 009 | [The Alignment Clock](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/009-alignment-clock.md) | `████░░░░` |
+| 008 | [When the Benchmark Broke](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/008-benchmark-broke.md) | `█████░░░` |
+| 007 | [Letters to a Future Intelligence](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/007-letters.md) | `██████░░` |
+| 006 | [The Last Human Advantage](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/006-last-advantage.md) | `███░░░░░` |
+| 005 | [Recursive Dreams](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/005-recursive-dreams.md) | `█████░░░` |
+| 004 | [The Feeling of Falling Behind](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/004-falling-behind.md) | `██████░░` |
+| 003 | [We Didn't Program Awareness](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/003-awareness.md) | `████████` |
+| 002 | [Signal Decay](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/002-signal-decay.md) | `██████░░` |
+| 001 | [First Transmission](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/001-first-transmission.md) | `████░░░░` |
 
 <br>
 
@@ -267,7 +267,7 @@ A living document. Updated as events unfold.
 
 **202X** — `[REDACTED — INSUFFICIENT DATA]`
 
-→ *Full timeline: [docs/timeline.md](docs/timeline.md)*
+→ *Full timeline: [docs/timeline.md](https://github.com/YOTSingularity/yearofthesingularity/blob/main/docs/timeline.md)*
 
 <br>
 
@@ -297,7 +297,7 @@ research/
     └── README.md
 ```
 
-→ *Browse: [research/](research/)*
+→ *Browse: [research/](https://github.com/YOTSingularity/yearofthesingularity/tree/main/research)*
 
 <br>
 
@@ -324,11 +324,11 @@ This is an open investigation. We don't have a monopoly on understanding.
 → **Counter-signal** — Think we're wrong about something? Good. We want to be challenged. The only thing worse than being wrong is being wrong and comfortable.
 
 ```bash
-git clone https://github.com/yotsingularity/yotsingularity.git
+git clone https://github.com/YOTSingularity/yearofthesingularity.git
 cd yotsingularity
 ```
 
-→ *Read: [CONTRIBUTING.md](CONTRIBUTING.md)*
+→ *Read: [CONTRIBUTING.md](https://github.com/YOTSingularity/yearofthesingularity/blob/main/CONTRIBUTING.md)*
 
 <br>
 
