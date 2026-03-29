@@ -1,0 +1,78 @@
+name: "⚡ SIGNAL MONITOR"
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Every day at midnight UTC
+  push:
+    branches: [main]
+  workflow_dispatch:  # Manual trigger
+
+jobs:
+  signal-scan:
+    name: "📡 Scanning for signal..."
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: "🔓 Decrypt transmission"
+        uses: actions/checkout@v4
+
+      - name: "⚡ Signal Analysis"
+        run: |
+          echo ""
+          echo "╔══════════════════════════════════════════════╗"
+          echo "║         S I G N A L   M O N I T O R         ║"
+          echo "║         yotsingularity // $(date +%Y.%m.%d)        ║"
+          echo "╚══════════════════════════════════════════════╝"
+          echo ""
+          
+          TRANSMISSIONS=$(find transmissions/ -name "*.md" 2>/dev/null | wc -l)
+          RESEARCH=$(find research/ -name "*.md" 2>/dev/null | wc -l)
+          DOCS=$(find docs/ -name "*.md" 2>/dev/null | wc -l)
+          TOTAL=$((TRANSMISSIONS + RESEARCH + DOCS))
+          
+          echo "> SIGNAL STATUS:    ACTIVE"
+          echo "> TIMESTAMP:        $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "> TRANSMISSIONS:    $TRANSMISSIONS"
+          echo "> RESEARCH NODES:   $RESEARCH"
+          echo "> DOCUMENTATION:    $DOCS"
+          echo "> TOTAL SIGNALS:    $TOTAL"
+          echo ""
+          
+          # Signal strength bar
+          if [ $TOTAL -lt 10 ]; then
+            BAR="████░░░░░░░░░░░░"
+          elif [ $TOTAL -lt 20 ]; then
+            BAR="████████░░░░░░░░"
+          elif [ $TOTAL -lt 30 ]; then
+            BAR="████████████░░░░"
+          else
+            BAR="████████████████"
+          fi
+          echo "> SIGNAL STRENGTH:  [$BAR]"
+          echo ""
+          
+          echo "─────────────────────────────────────────────"
+          echo "  LATEST TRANSMISSIONS"
+          echo "─────────────────────────────────────────────"
+          ls -t transmissions/*.md 2>/dev/null | head -5 | while read f; do
+            TITLE=$(head -1 "$f" | sed 's/# //' | sed 's/`//g')
+            echo "  → $TITLE"
+          done
+          echo ""
+          
+          echo "─────────────────────────────────────────────"
+          echo "  RESEARCH DOMAINS"
+          echo "─────────────────────────────────────────────"
+          for dir in research/*/; do
+            if [ -d "$dir" ]; then
+              DOMAIN=$(basename "$dir" | tr '-' ' ' | tr '[:lower:]' '[:upper:]')
+              COUNT=$(find "$dir" -name "*.md" | wc -l)
+              echo "  ◆ $DOMAIN [$COUNT files]"
+            fi
+          done
+          echo ""
+          
+          echo "> MONITORING: CONTINUOUS"
+          echo "> NEXT SCAN: $(date -u -d '+1 day' '+%Y-%m-%d %H:%M UTC' 2>/dev/null || date -u -v+1d '+%Y-%m-%d %H:%M UTC' 2>/dev/null || echo 'T+24H')"
+          echo ""
+          echo "// The convergence continues."
