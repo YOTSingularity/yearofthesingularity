@@ -1,0 +1,119 @@
+name: "🌀 CONVERGENCE TRACKER"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  convergence-check:
+    name: "🔮 Tracking convergence..."
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "🔓 Acquire signal"
+        uses: actions/checkout@v4
+
+      - name: "🌀 Convergence Analysis"
+        run: |
+          echo ""
+          echo "╔══════════════════════════════════════════════╗"
+          echo "║     C O N V E R G E N C E   T R A C K E R   ║"
+          echo "╚══════════════════════════════════════════════╝"
+          echo ""
+          echo "> Analyzing repository integrity..."
+          echo ""
+          
+          ERRORS=0
+          
+          # Check core documents
+          echo "─── CORE DOCUMENTS ───"
+          for file in README.md CONTRIBUTING.md LICENSE; do
+            if [ -f "$file" ]; then
+              SIZE=$(wc -c < "$file")
+              echo "  ✅ $file [${SIZE} bytes]"
+            else
+              echo "  ❌ $file [MISSING]"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+          echo ""
+          
+          # Check docs
+          echo "─── DOCUMENTATION ───"
+          for file in docs/manifesto.md docs/the-approach.md docs/the-threshold.md docs/the-other-side.md docs/timeline.md; do
+            if [ -f "$file" ]; then
+              WORDS=$(wc -w < "$file")
+              echo "  ✅ $file [$WORDS words]"
+            else
+              echo "  ❌ $file [MISSING]"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+          echo ""
+          
+          # Check transmissions
+          echo "─── TRANSMISSIONS ───"
+          T_COUNT=0
+          T_WORDS=0
+          for file in transmissions/*.md; do
+            if [ -f "$file" ]; then
+              W=$(wc -w < "$file")
+              T_WORDS=$((T_WORDS + W))
+              T_COUNT=$((T_COUNT + 1))
+              NUM=$(basename "$file" | grep -o '^[0-9]*')
+              TITLE=$(grep "^## " "$file" | head -1 | sed 's/## //')
+              echo "  ✅ #$NUM — $TITLE"
+            fi
+          done
+          echo "  ─────────────────"
+          echo "  Total: $T_COUNT transmissions, $T_WORDS words"
+          echo ""
+          
+          # Check research
+          echo "─── RESEARCH DOMAINS ───"
+          R_COUNT=0
+          for dir in research/*/; do
+            if [ -d "$dir" ] && [ -f "${dir}README.md" ]; then
+              DOMAIN=$(basename "$dir")
+              echo "  ✅ $DOMAIN"
+              R_COUNT=$((R_COUNT + 1))
+            elif [ -d "$dir" ]; then
+              DOMAIN=$(basename "$dir")
+              echo "  ⚠️  $DOMAIN [no README]"
+            fi
+          done
+          echo "  ─────────────────"
+          echo "  Total: $R_COUNT active domains"
+          echo ""
+          
+          # Final verdict
+          TOTAL_WORDS=$(find . -name "*.md" -exec cat {} + | wc -w)
+          TOTAL_FILES=$(find . -name "*.md" | wc -l)
+          
+          echo "═══════════════════════════════════════════════"
+          echo ""
+          echo "  INVESTIGATION STATUS"
+          echo ""
+          echo "  Files:          $TOTAL_FILES"
+          echo "  Total words:    $TOTAL_WORDS"
+          echo "  Transmissions:  $T_COUNT"
+          echo "  Research nodes: $R_COUNT"
+          echo "  Errors:         $ERRORS"
+          echo ""
+          
+          if [ $ERRORS -eq 0 ]; then
+            echo "  ⚡ SIGNAL INTEGRITY: NOMINAL"
+            echo "  ⚡ CONVERGENCE STATUS: ON TRACK"
+          else
+            echo "  ⚠️  SIGNAL INTEGRITY: DEGRADED"
+            echo "  ⚠️  $ERRORS missing signals detected"
+          fi
+          
+          echo ""
+          echo "═══════════════════════════════════════════════"
+          echo ""
+          echo "// The investigation continues."
+          
+          exit $ERRORS
