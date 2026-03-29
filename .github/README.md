@@ -15,6 +15,6 @@ Documenting the convergence. Signal over noise.
 
 <br>
 
-[𝕏 @yotsingularity](https://x.com/yotsingularity) · [The Investigation →](https://github.com/yotsingularity/yotsingularity)
+[𝕏 @yotsingularity](https://x.com/yotsingularity) · [The Investigation →](https://github.com/yotsingularity/yearofthesingularity)
 
 </div>
