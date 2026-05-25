@@ -72,6 +72,20 @@ Verify header date, numbering, file naming, source notes, claim labels, link tar
 
 **Output:** Approval decision, remaining risks, and exact verification evidence.
 
+## Lane 5: World Pulse Scout
+
+**Goal:** Keep the archive current against live public sources without turning every drift check into a publication.
+
+**Scope:** `workflows/world-pulse-loop.md`, `reports/`, `evidence/evidence-graph.json`, `evidence/claim-audit-ledger.md`, `observatory/data/signals.js`, and approved public source anchors.
+
+**Prompt:**
+
+```text
+Run the YOTS World Pulse scout. Check current source anchors for changes in capability, agency, alignment, labor/economics, benchmarks, and public sentiment. Return new or changed sources, candidate claim updates, counter-signal, whether a repo patch is warranted, and Lumi hygiene. Do not edit files, inspect secrets, commit, push, deploy, or publish.
+```
+
+**Output:** Source-drift report, candidate claim rows, counter-signal, and a recommendation to patch, wait, or retire a claim.
+
 ## Promotion Rule
 
 Keep this as a repo-local source-pack pattern until it has been used repeatedly. Promote to a global skill only through skill governance if it becomes durable outside YOTS.

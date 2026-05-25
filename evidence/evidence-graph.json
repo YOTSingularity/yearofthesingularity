@@ -28,6 +28,26 @@
       "id": "benchmarks",
       "label": "Benchmarks",
       "question": "Where do benchmarks still measure progress, and where are they saturating or losing meaning?"
+    },
+    {
+      "id": "capability",
+      "label": "Capability",
+      "question": "Which current capability claims are anchored in dated measurements rather than mood?"
+    },
+    {
+      "id": "agency",
+      "label": "Agency",
+      "question": "What can models do across longer tasks, and where do agentic interpretations overreach?"
+    },
+    {
+      "id": "labor",
+      "label": "Labor",
+      "question": "What is changing in adoption, productivity, exposure, displacement, and job quality?"
+    },
+    {
+      "id": "public_sentiment",
+      "label": "Public Sentiment",
+      "question": "How do public trust, concern, and legitimacy track against expert optimism?"
     }
   ],
   "sources": [
@@ -179,6 +199,76 @@
       "date": "2023-02-01",
       "type": "news_on_analyst_note",
       "reliability": "secondary",
+      "last_checked": "2026-05-25"
+    },
+    {
+      "id": "S016",
+      "title": "The 2026 AI Index Report",
+      "publisher": "Stanford HAI",
+      "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      "date": "2026-04-13",
+      "type": "report",
+      "reliability": "institutional",
+      "last_checked": "2026-05-25"
+    },
+    {
+      "id": "S017",
+      "title": "AI Models Documentation - Downloads",
+      "publisher": "Epoch AI",
+      "url": "https://epoch.ai/data/ai-models-documentation/downloads",
+      "date": "2026-05-25",
+      "type": "dataset_documentation",
+      "reliability": "primary",
+      "last_checked": "2026-05-25"
+    },
+    {
+      "id": "S018",
+      "title": "Time Horizon 1.1",
+      "publisher": "METR",
+      "url": "https://metr.org/blog/2026-1-29-time-horizon-1-1/",
+      "date": "2026-01-29",
+      "type": "research_post",
+      "reliability": "primary",
+      "last_checked": "2026-05-25"
+    },
+    {
+      "id": "S019",
+      "title": "Task-Completion Time Horizons of Frontier AI Models",
+      "publisher": "METR",
+      "url": "https://metr.org/time-horizons/",
+      "date": "2026-05-13",
+      "type": "live_dashboard_methodology",
+      "reliability": "primary",
+      "last_checked": "2026-05-25"
+    },
+    {
+      "id": "S020",
+      "title": "What the data says about Americans' views of artificial intelligence",
+      "publisher": "Pew Research Center",
+      "url": "https://www.pewresearch.org/short-reads/2026/03/12/key-findings-about-how-americans-view-artificial-intelligence/",
+      "date": "2026-03-12",
+      "type": "survey_summary",
+      "reliability": "institutional",
+      "last_checked": "2026-05-25"
+    },
+    {
+      "id": "S021",
+      "title": "Measuring the Self-Reported Impact of Early-2026 AI on Technical Worker Productivity",
+      "publisher": "METR",
+      "url": "https://metr.org/blog/2026-05-11-ai-usage-survey/",
+      "date": "2026-05-11",
+      "type": "survey_report",
+      "reliability": "primary",
+      "last_checked": "2026-05-25"
+    },
+    {
+      "id": "S022",
+      "title": "Frontier Risk Report (February to March 2026)",
+      "publisher": "METR",
+      "url": "https://metr.org/blog/2026-05-19-frontier-risk-report/",
+      "date": "2026-05-19",
+      "type": "risk_report",
+      "reliability": "primary",
       "last_checked": "2026-05-25"
     }
   ],
@@ -406,6 +496,146 @@
       "last_verified": "2026-05-25",
       "audit_status": "supported-as-risk-frame",
       "note": "Future claims should name the benchmark, model, score, date, and saturation threshold."
+    },
+    {
+      "id": "C017",
+      "domain": "capability",
+      "claim": "Capability is not plateauing; the 2026 AI Index reports continued rapid gains and broader adoption while preserving jagged-frontier caution.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "empirically_supported",
+      "confidence": "medium",
+      "risk_level": "medium",
+      "time_scope": "2025-2026",
+      "sources": ["S016"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported-with-scope",
+      "note": "Use this as a broad current-world capability signal; name individual benchmarks when making stronger claims."
+    },
+    {
+      "id": "C018",
+      "domain": "capability",
+      "claim": "The frontier should be tracked as a live dataset, not only as a yearly report, because model datasets can update on the day of analysis.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "empirically_supported",
+      "confidence": "high",
+      "risk_level": "low",
+      "time_scope": "2026-05-25",
+      "sources": ["S017"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported",
+      "note": "Epoch AI's data-download documentation was checked on the same date as this pulse."
+    },
+    {
+      "id": "C019",
+      "domain": "agency",
+      "claim": "METR Time Horizon 1.1 expanded the task suite and makes longer autonomous-task capability more measurable.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "empirically_supported",
+      "confidence": "high",
+      "risk_level": "medium",
+      "time_scope": "2026-01",
+      "sources": ["S018"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported",
+      "note": "Keep the claim tied to METR's task suite and measurement definition."
+    },
+    {
+      "id": "C020",
+      "domain": "agency",
+      "claim": "Task-completion time horizon measures task difficulty at a reliability threshold; it is not a direct measure of unconstrained autonomy or job automation.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "empirically_supported",
+      "confidence": "high",
+      "risk_level": "medium",
+      "time_scope": "2026",
+      "sources": ["S018", "S019"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported-as-counter-signal",
+      "note": "Use this whenever YOTS discusses agents so the metric does not become a myth."
+    },
+    {
+      "id": "C021",
+      "domain": "alignment",
+      "claim": "Current frontier-agent risk includes constraint violations and reward-hacking behavior on hard tasks.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "empirically_supported",
+      "confidence": "medium",
+      "risk_level": "high",
+      "time_scope": "2026-02 to 2026-03",
+      "sources": ["S022"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported-with-pilot-limitations",
+      "note": "METR describes a pilot exercise; do not generalize to all deployed agents without more evidence."
+    },
+    {
+      "id": "C022",
+      "domain": "alignment",
+      "claim": "Responsible-AI measurement and reporting still lag capability progress in the 2026 current-world picture.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "empirically_supported",
+      "confidence": "high",
+      "risk_level": "high",
+      "time_scope": "2026 AI Index",
+      "sources": ["S016"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported",
+      "note": "Use as an evidence-backed governance/evaluation concern, not as proof of inevitable failure."
+    },
+    {
+      "id": "C023",
+      "domain": "labor",
+      "claim": "AI adoption has crossed from niche tool into mass economic context.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "empirically_supported",
+      "confidence": "medium",
+      "risk_level": "medium",
+      "time_scope": "2025-2026",
+      "sources": ["S016"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported-with-scope",
+      "note": "Adoption is not the same as measured productivity, wage growth, displacement, or trust."
+    },
+    {
+      "id": "C024",
+      "domain": "labor",
+      "claim": "Early-2026 technical workers report material AI value uplift, but the evidence is caveated self-report rather than direct productivity measurement.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "reported_metric",
+      "confidence": "medium",
+      "risk_level": "medium",
+      "time_scope": "2026-05",
+      "sources": ["S021"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported-with-selection-bias-caveat",
+      "note": "Useful for labor context, but do not treat as a representative causal estimate."
+    },
+    {
+      "id": "C025",
+      "domain": "public_sentiment",
+      "claim": "U.S. public sentiment remains cautious: Pew reports more concern than excitement about increased AI use in daily life.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "reported_metric",
+      "confidence": "high",
+      "risk_level": "medium",
+      "time_scope": "2025 survey summarized 2026-03",
+      "sources": ["S020"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported",
+      "note": "Keep the jurisdiction and survey date visible."
+    },
+    {
+      "id": "C026",
+      "domain": "public_sentiment",
+      "claim": "Expert and public expectations diverge sharply on AI's positive impact on how people do their jobs.",
+      "location": "reports/2026-05-world-pulse.md",
+      "label": "reported_metric",
+      "confidence": "high",
+      "risk_level": "medium",
+      "time_scope": "2026 AI Index",
+      "sources": ["S016"],
+      "last_verified": "2026-05-25",
+      "audit_status": "supported",
+      "note": "Use as legitimacy context, not as a direct safety or economic forecast."
     }
   ],
   "edges": [
@@ -428,7 +658,18 @@
     { "from": "C014", "to": "S006", "relation": "supported_by" },
     { "from": "C015", "to": "S007", "relation": "supported_by" },
     { "from": "C016", "to": "S005", "relation": "supported_by" },
-    { "from": "C016", "to": "S009", "relation": "method_context" }
+    { "from": "C016", "to": "S009", "relation": "method_context" },
+    { "from": "C017", "to": "S016", "relation": "supported_by" },
+    { "from": "C018", "to": "S017", "relation": "supported_by" },
+    { "from": "C019", "to": "S018", "relation": "supported_by" },
+    { "from": "C020", "to": "S018", "relation": "supported_by" },
+    { "from": "C020", "to": "S019", "relation": "method_context" },
+    { "from": "C021", "to": "S022", "relation": "supported_by" },
+    { "from": "C022", "to": "S016", "relation": "supported_by" },
+    { "from": "C023", "to": "S016", "relation": "supported_by" },
+    { "from": "C024", "to": "S021", "relation": "reported_by" },
+    { "from": "C025", "to": "S020", "relation": "reported_by" },
+    { "from": "C026", "to": "S016", "relation": "reported_by" }
   ],
   "trust_policy": {
     "source_freshness_days": 180,

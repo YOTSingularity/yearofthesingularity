@@ -1,16 +1,16 @@
 window.YOTS_DATA = {
   generatedAt: "2026-05-25",
   sources: {
-    commit: "611ae33",
+    commit: "89415a5 + world-pulse",
     canonical: "markdown plus evidence/evidence-graph.json",
     graphPath: "../evidence/evidence-graph.json",
     ledgerPath: "../evidence/claim-audit-ledger.md"
   },
   metrics: {
-    transmissions: 10,
+    transmissions: 11,
     researchDomains: 7,
-    auditedClaims: 16,
-    sourceNodes: 15
+    auditedClaims: 26,
+    sourceNodes: 22
   },
   timeline: [
     {
@@ -51,11 +51,11 @@ window.YOTS_DATA = {
       era: "THE CONVERGENCE",
       years: "2026",
       title: "The map strains under currentness",
-      summary: "YOTS treats 2026 as the point where documentation itself becomes harder. This is intentionally framed as live witness posture, not settled evidence.",
-      confidence: "low",
-      claimIds: ["C001", "C008", "C011"],
-      evidenceIds: ["S005", "S008"],
-      sourcePath: "../docs/timeline.md"
+      summary: "YOTS now treats 2026 as a live source surface: capability, agency, labor, risk, and trust must be rechecked with dates attached.",
+      confidence: "medium",
+      claimIds: ["C017", "C018", "C019", "C020", "C021", "C022", "C023", "C024", "C025", "C026"],
+      evidenceIds: ["S016", "S017", "S018", "S019", "S020", "S021", "S022"],
+      sourcePath: "../reports/2026-05-world-pulse.md"
     },
     {
       id: "era-beyond",
@@ -165,9 +165,105 @@ window.YOTS_DATA = {
       stance: "example",
       confidence: "medium",
       whyItMatters: "Shows a concrete research-automation direction without proving a closed recursive loop."
+    },
+    {
+      id: "S016",
+      domain: "capability",
+      title: "The 2026 AI Index Report",
+      publisher: "Stanford HAI",
+      date: "2026-04-13",
+      url: "https://hai.stanford.edu/ai-index/2026-ai-index-report",
+      sourceType: "report",
+      stance: "supports with scope",
+      confidence: "medium",
+      whyItMatters: "Provides the current macro frame for capability gains, adoption, labor, responsible AI, and public opinion."
+    },
+    {
+      id: "S017",
+      domain: "capability",
+      title: "AI Models Documentation - Downloads",
+      publisher: "Epoch AI",
+      date: "2026-05-25",
+      url: "https://epoch.ai/data/ai-models-documentation/downloads",
+      sourceType: "dataset documentation",
+      stance: "currentness anchor",
+      confidence: "high",
+      whyItMatters: "Shows why YOTS needs live source checks: the frontier model dataset can update on the same day as analysis."
+    },
+    {
+      id: "S018",
+      domain: "agency",
+      title: "Time Horizon 1.1",
+      publisher: "METR",
+      date: "2026-01-29",
+      url: "https://metr.org/blog/2026-1-29-time-horizon-1-1/",
+      sourceType: "research post",
+      stance: "supports with limits",
+      confidence: "high",
+      whyItMatters: "Updates the long-task measurement frame without equating task horizon with unconstrained autonomy."
+    },
+    {
+      id: "S019",
+      domain: "agency",
+      title: "Task-Completion Time Horizons of Frontier AI Models",
+      publisher: "METR",
+      date: "2026-05-13",
+      url: "https://metr.org/time-horizons/",
+      sourceType: "methodology dashboard",
+      stance: "method context",
+      confidence: "high",
+      whyItMatters: "Clarifies what the time-horizon metric means and what it cannot prove by itself."
+    },
+    {
+      id: "S020",
+      domain: "public_sentiment",
+      title: "Americans' views of artificial intelligence",
+      publisher: "Pew Research Center",
+      date: "2026-03-12",
+      url: "https://www.pewresearch.org/short-reads/2026/03/12/key-findings-about-how-americans-view-artificial-intelligence/",
+      sourceType: "survey summary",
+      stance: "public counter-signal",
+      confidence: "high",
+      whyItMatters: "Anchors the claim that public concern remains a live legitimacy constraint."
+    },
+    {
+      id: "S021",
+      domain: "labor",
+      title: "Self-Reported Impact of Early-2026 AI on Technical Worker Productivity",
+      publisher: "METR",
+      date: "2026-05-11",
+      url: "https://metr.org/blog/2026-05-11-ai-usage-survey/",
+      sourceType: "survey report",
+      stance: "supports with caveats",
+      confidence: "medium",
+      whyItMatters: "Gives a current productivity signal while warning against treating self-report as measured causal impact."
+    },
+    {
+      id: "S022",
+      domain: "alignment",
+      title: "Frontier Risk Report",
+      publisher: "METR",
+      date: "2026-05-19",
+      url: "https://metr.org/blog/2026-05-19-frontier-risk-report/",
+      sourceType: "risk report",
+      stance: "supports with pilot limits",
+      confidence: "medium",
+      whyItMatters: "Adds current evidence that hard agent tasks can surface constraint violations and reward-hacking behavior."
     }
   ],
   transmissions: [
+    {
+      number: "011",
+      slug: "map-has-a-pulse",
+      title: "The Map Has A Pulse",
+      dateLabel: "2026.05.25",
+      signalStrength: "██████░░",
+      classification: "WORLD-PULSE",
+      summary: "The project turns currentness into cadence: capability, agency, risk, labor, and trust are now dated signals.",
+      tags: ["world-pulse", "currentness", "evidence"],
+      evidenceIds: ["S016", "S017", "S018", "S019", "S020", "S021", "S022"],
+      sourcePath: "../transmissions/011-map-has-a-pulse.md"
+    },
     {
       number: "010",
       slug: "witness-problem",
@@ -316,6 +412,33 @@ window.YOTS_DATA = {
       status: "active",
       evidenceIds: ["S008"],
       issueTemplatePath: "../.github/ISSUE_TEMPLATE/counter-signal.md"
+    },
+    {
+      id: "CS004",
+      claimId: "C020",
+      challenge: "Do not let time-horizon results become a myth of general autonomous labor; the metric is narrower than the story.",
+      severity: "high",
+      status: "active",
+      evidenceIds: ["S018", "S019"],
+      issueTemplatePath: "../.github/ISSUE_TEMPLATE/counter-signal.md"
+    },
+    {
+      id: "CS005",
+      claimId: "C024",
+      challenge: "Self-reported productivity value can be selection-biased and overestimated; direct field evidence is still needed.",
+      severity: "medium",
+      status: "active",
+      evidenceIds: ["S021"],
+      issueTemplatePath: "../.github/ISSUE_TEMPLATE/counter-signal.md"
+    },
+    {
+      id: "CS006",
+      claimId: "C025",
+      challenge: "Public concern is a legitimacy signal, not proof that a technical danger claim is true.",
+      severity: "medium",
+      status: "active",
+      evidenceIds: ["S020"],
+      issueTemplatePath: "../.github/ISSUE_TEMPLATE/counter-signal.md"
     }
   ],
   claims: [
@@ -326,6 +449,16 @@ window.YOTS_DATA = {
     { id: "C009", domain: "timeline", status: "needs-source-table", confidence: "low", text: "Specific expert prediction misses remain under-sourced.", sourcePath: "../research/timelines/README.md", evidenceIds: [] },
     { id: "C011", domain: "alignment", status: "needs-metric", confidence: "medium", text: "Capability-safety gap is a YOTS concern, not yet a measured graph.", sourcePath: "../transmissions/009-alignment-clock.md", evidenceIds: ["S005", "S008"] },
     { id: "C013", domain: "economics", status: "supported", confidence: "high", text: "Labor effects include both exposure and augmentation.", sourcePath: "../research/economic-impact/README.md", evidenceIds: ["S006", "S007"] },
-    { id: "C016", domain: "benchmarks", status: "supported-as-risk-frame", confidence: "medium", text: "Benchmark saturation is a measurement risk.", sourcePath: "../transmissions/008-benchmark-broke.md", evidenceIds: ["S005", "S009"] }
+    { id: "C016", domain: "benchmarks", status: "supported-as-risk-frame", confidence: "medium", text: "Benchmark saturation is a measurement risk.", sourcePath: "../transmissions/008-benchmark-broke.md", evidenceIds: ["S005", "S009"] },
+    { id: "C017", domain: "capability", status: "supported-with-scope", confidence: "medium", text: "Capability is still moving, but the claim must stay benchmark-specific.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S016"] },
+    { id: "C018", domain: "capability", status: "supported", confidence: "high", text: "The frontier is a live dataset, not only a yearly report.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S017"] },
+    { id: "C019", domain: "agency", status: "supported", confidence: "high", text: "METR TH1.1 improves long-task measurement coverage.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S018"] },
+    { id: "C020", domain: "agency", status: "supported-as-counter-signal", confidence: "high", text: "Time horizon is not a direct autonomy or labor automation metric.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S018", "S019"] },
+    { id: "C021", domain: "alignment", status: "supported-with-pilot-limitations", confidence: "medium", text: "Hard agent tasks can surface constraint violations and reward-hacking.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S022"] },
+    { id: "C022", domain: "alignment", status: "supported", confidence: "high", text: "Responsible-AI measurement still lags capability movement.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S016"] },
+    { id: "C023", domain: "labor", status: "supported-with-scope", confidence: "medium", text: "AI adoption is now mass economic context.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S016"] },
+    { id: "C024", domain: "labor", status: "supported-with-selection-bias-caveat", confidence: "medium", text: "Technical workers report value uplift, but evidence is self-report.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S021"] },
+    { id: "C025", domain: "public_sentiment", status: "supported", confidence: "high", text: "U.S. public sentiment remains cautious.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S020"] },
+    { id: "C026", domain: "public_sentiment", status: "supported", confidence: "high", text: "Experts and the public diverge on AI's positive work impact.", sourcePath: "../reports/2026-05-world-pulse.md", evidenceIds: ["S016"] }
   ]
 };

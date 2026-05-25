@@ -212,6 +212,7 @@ Dispatches from the edge. Raw observations. Unfiltered signal.
 
 | # | Transmission | Signal |
 |---|-------------|--------|
+| 011 | [The Map Has A Pulse](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/011-map-has-a-pulse.md) | `██████░░` |
 | 010 | [The Witness Problem](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/010-witness-problem.md) | `█████░░░` |
 | 009 | [The Alignment Clock](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/009-alignment-clock.md) | `████░░░░` |
 | 008 | [When the Benchmark Broke](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/008-benchmark-broke.md) | `█████░░░` |
@@ -305,6 +306,8 @@ research/
 
 → *Graph: [evidence/evidence-graph.json](https://github.com/YOTSingularity/yearofthesingularity/blob/main/evidence/evidence-graph.json)*
 
+→ *World Pulse: [reports/2026-05-world-pulse.md](../reports/2026-05-world-pulse.md)*
+
 <br>
 
 ---
@@ -377,7 +380,7 @@ cd yotsingularity
 ```
 > SIGNAL STATUS: ACTIVE
 > MONITORING: CONTINUOUS  
-> NEXT TRANSMISSION: 011 PENDING
+> NEXT TRANSMISSION: 012 PENDING
 > 
 > Stay close.
 ```
@@ -405,3 +408,5 @@ The archive now has a source-bound review surface:
 → *Open locally: [observatory/index.html](../observatory/index.html)*
 
 → *Source-pack lanes: [docs/source-pack/full-blast-lanes.md](../docs/source-pack/full-blast-lanes.md)*
+
+→ *World Pulse loop: [workflows/world-pulse-loop.md](../workflows/world-pulse-loop.md)*
