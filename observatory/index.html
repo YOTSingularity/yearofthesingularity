@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YOTS Singularity Observatory</title>
+    <meta name="description" content="A source-bound observatory for the Year of the Singularity archive.">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar" aria-label="Observatory status">
+      <a class="brand" href="#dashboard" aria-label="YOTS Observatory dashboard">
+        <span class="brand-mark" aria-hidden="true">YOTS</span>
+        <span class="brand-text">Singularity Observatory</span>
+      </a>
+      <nav class="tabs" aria-label="Primary views">
+        <a href="#timeline">Timeline</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#transmissions">Transmissions</a>
+        <a href="#counter-signal">Counter-Signal</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="dashboard" class="section dashboard" aria-labelledby="dashboard-title">
+        <div class="status-line">
+          <span>signal active</span>
+          <span>last verified <time datetime="2026-05-25">2026.05.25</time></span>
+          <span>confidence decreases with distance</span>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="intro">
+            <p class="eyebrow">Y O T S I N G U L A R I T Y</p>
+            <h1 id="dashboard-title">A source-bound map of the approach.</h1>
+            <p>
+              The archive can stay strange. The claims need coordinates. This observatory binds the timeline,
+              transmissions, evidence, and counter-signal into one review surface.
+            </p>
+          </div>
+
+          <div class="signal-matrix" aria-label="Evidence coverage matrix">
+            <div class="matrix-row">
+              <span>timeline</span>
+              <i style="--level: 88%"></i>
+            </div>
+            <div class="matrix-row">
+              <span>alignment</span>
+              <i style="--level: 58%"></i>
+            </div>
+            <div class="matrix-row">
+              <span>economics</span>
+              <i style="--level: 76%"></i>
+            </div>
+            <div class="matrix-row">
+              <span>benchmarks</span>
+              <i style="--level: 64%"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="metric-grid" id="metrics" aria-label="Archive metrics"></div>
+      </section>
+
+      <section id="timeline" class="section" aria-labelledby="timeline-title">
+        <div class="section-heading">
+          <p class="eyebrow">Timeline</p>
+          <h2 id="timeline-title">Chronology With Confidence</h2>
+        </div>
+        <div class="timeline-list" id="timeline-list"></div>
+      </section>
+
+      <section id="evidence" class="section" aria-labelledby="evidence-title">
+        <div class="section-heading">
+          <p class="eyebrow">Evidence</p>
+          <h2 id="evidence-title">Source Graph</h2>
+        </div>
+        <div class="filter-row" aria-label="Evidence filters">
+          <button class="filter active" type="button" data-domain="all">All</button>
+          <button class="filter" type="button" data-domain="timeline">Timeline</button>
+          <button class="filter" type="button" data-domain="alignment">Alignment</button>
+          <button class="filter" type="button" data-domain="economics">Economics</button>
+          <button class="filter" type="button" data-domain="benchmarks">Benchmarks</button>
+        </div>
+        <div class="evidence-grid" id="evidence-grid"></div>
+      </section>
+
+      <section id="transmissions" class="section" aria-labelledby="transmissions-title">
+        <div class="section-heading">
+          <p class="eyebrow">Transmissions</p>
+          <h2 id="transmissions-title">Signal Log</h2>
+        </div>
+        <div class="transmission-list" id="transmission-list"></div>
+      </section>
+
+      <section id="counter-signal" class="section" aria-labelledby="counter-title">
+        <div class="section-heading">
+          <p class="eyebrow">Counter-Signal</p>
+          <h2 id="counter-title">What Would Change The Map</h2>
+        </div>
+        <div class="counter-grid" id="counter-grid"></div>
+        <pre class="issue-block"><code>title: [COUNTER-SIGNAL] 
+claim:
+evidence:
+what changes if this is true:
+source links:
+</code></pre>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a href="../README.md">README</a>
+      <a href="../evidence/claim-audit-ledger.md">Claim ledger</a>
+      <a href="../docs/source-pack/full-blast-lanes.md">Source-pack lanes</a>
+      <a href="https://github.com/YOTSingularity/yearofthesingularity">GitHub</a>
+    </footer>
+
+    <script src="data/signals.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

@@ -3,8 +3,25 @@ name: "🌀 CONVERGENCE TRACKER"
 on:
   push:
     branches: [main]
+    paths:
+      - "**/*.md"
+      - "**/*.html"
+      - "**/*.js"
+      - "**/*.json"
+      - ".github/workflows/**"
+      - "scripts/**"
   pull_request:
     branches: [main]
+    paths:
+      - "**/*.md"
+      - "**/*.html"
+      - "**/*.js"
+      - "**/*.json"
+      - ".github/workflows/**"
+      - "scripts/**"
+
+permissions:
+  contents: read
 
 jobs:
   convergence-check:
@@ -115,5 +132,22 @@ jobs:
           echo "═══════════════════════════════════════════════"
           echo ""
           echo "// The investigation continues."
-          
+
           exit $ERRORS
+
+  trust-graph:
+    name: "🧭 Trust graph integrity"
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: "🔓 Acquire signal"
+        uses: actions/checkout@v4
+
+      - name: "🧰 Prepare Node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: "🧭 Validate trust graph"
+        run: node scripts/trust-check.mjs --ci

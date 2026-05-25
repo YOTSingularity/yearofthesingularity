@@ -19,4 +19,4 @@
 - [ ] This adds information that wasn't already present
 - [ ] Claims are supported by evidence or clearly marked as speculation
 - [ ] I've been honest about what I don't know
-- [ ] I've read the [contributing guide](CONTRIBUTING.md)
+- [ ] I've read the [contributing guide](../CONTRIBUTING.md)

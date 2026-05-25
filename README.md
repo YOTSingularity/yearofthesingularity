@@ -1,7 +1,7 @@
 ```
 > SIGNAL ACQUIRED
 > SOURCE: UNKNOWN
-> TIMESTAMP: 2026-XX-XX
+> TIMESTAMP: 2026-05-25
 > STATUS: ████████░░ DECRYPTING...
 ```
 
@@ -65,6 +65,7 @@ We don't have all the answers. We have better questions.
 006 ─── RESEARCH ──────────────────── The evidence
 007 ─── CONTRIBUTING ───────────────── How to join
 008 ─── THE QUESTION ───────────────── Why this matters
+009 ─── OBSERVATORY ───────────────── Source-bound map
 ```
 
 <br>
@@ -211,6 +212,7 @@ Dispatches from the edge. Raw observations. Unfiltered signal.
 
 | # | Transmission | Signal |
 |---|-------------|--------|
+| 010 | [The Witness Problem](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/010-witness-problem.md) | `█████░░░` |
 | 009 | [The Alignment Clock](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/009-alignment-clock.md) | `████░░░░` |
 | 008 | [When the Benchmark Broke](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/008-benchmark-broke.md) | `█████░░░` |
 | 007 | [Letters to a Future Intelligence](https://github.com/YOTSingularity/yearofthesingularity/blob/main/transmissions/007-letters.md) | `██████░░` |
@@ -263,7 +265,7 @@ A living document. Updated as events unfold.
 
 **2025** — Autonomous agents. Models operate independently across extended tasks.
 
-**2026** — `[CURRENT YEAR]` — Multiple capability curves approaching vertical simultaneously. Research cycle time compressing toward zero. The map can no longer keep up with the territory.
+**2026** — Multiple capability curves are under active review. Research-cycle compression is now tracked as a source-sensitive claim rather than treated as settled fact.
 
 **202X** — `[REDACTED — INSUFFICIENT DATA]`
 
@@ -298,6 +300,10 @@ research/
 ```
 
 → *Browse: [research/](https://github.com/YOTSingularity/yearofthesingularity/tree/main/research)*
+
+→ *Audit: [evidence/claim-audit-ledger.md](https://github.com/YOTSingularity/yearofthesingularity/blob/main/evidence/claim-audit-ledger.md)*
+
+→ *Graph: [evidence/evidence-graph.json](https://github.com/YOTSingularity/yearofthesingularity/blob/main/evidence/evidence-graph.json)*
 
 <br>
 
@@ -371,7 +377,7 @@ cd yotsingularity
 ```
 > SIGNAL STATUS: ACTIVE
 > MONITORING: CONTINUOUS  
-> NEXT TRANSMISSION: PENDING
+> NEXT TRANSMISSION: 011 PENDING
 > 
 > Stay close.
 ```
@@ -385,3 +391,17 @@ cd yotsingularity
 `2 0 2 6  I S  T H E  Y E A R  O F  T H E  S I N G U L A R I T Y`
 
 </div>
+
+<br>
+
+---
+
+<br>
+
+## `009 ── OBSERVATORY`
+
+The archive now has a source-bound review surface:
+
+→ *Open locally: [observatory/index.html](observatory/index.html)*
+
+→ *Source-pack lanes: [docs/source-pack/full-blast-lanes.md](docs/source-pack/full-blast-lanes.md)*
