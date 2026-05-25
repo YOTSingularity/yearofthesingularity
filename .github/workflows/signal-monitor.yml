@@ -7,6 +7,9 @@ on:
     branches: [main]
   workflow_dispatch:  # Manual trigger
 
+permissions:
+  contents: read
+
 jobs:
   signal-scan:
     name: "📡 Scanning for signal..."
@@ -76,3 +79,11 @@ jobs:
           echo "> NEXT SCAN: $(date -u -d '+1 day' '+%Y-%m-%d %H:%M UTC' 2>/dev/null || date -u -v+1d '+%Y-%m-%d %H:%M UTC' 2>/dev/null || echo 'T+24H')"
           echo ""
           echo "// The convergence continues."
+
+      - name: "🧰 Prepare Node"
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: "🧭 Source freshness"
+        run: node scripts/trust-check.mjs --ci --freshness
